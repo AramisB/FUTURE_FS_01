@@ -430,6 +430,7 @@ body.dark-mode footer {
     box-shadow: var(--shadow-lg);
     transition: transform 0.3s ease;
     margin-bottom: 2rem;
+    margin-top: 6rem;
 }
 
 .about-text {
@@ -883,6 +884,7 @@ input:checked + .slider::before {
 .theme-toggle {
     position: relative;
     margin-left: 1rem;
+    z-index: 10;
 }
 
 .theme-input {
@@ -1036,7 +1038,7 @@ input:checked + .slider::before {
 /* Dark theme bubbles */
 [data-theme="dark"] .bubble-1,
 [data-theme="dark"] .bubble-4 {
-    background: rgba(237, 137, 54, 0.3);  /* Orange for dark theme */
+    background: rgba(237, 219, 54, 0.3);  /* Orange for dark theme */
 }
 
 [data-theme="dark"] .bubble-2,
@@ -1096,6 +1098,10 @@ input:checked + .slider::before {
 @media (max-width: 991px) {
     .container {
         max-width: 720px;
+    }
+    #theme-toggle{
+        display: inline-block;
+        margin-left: 1rem;
     }
 
     .about-content {
