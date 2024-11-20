@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brenda Aramis - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Portfolio of Brenda Aramis, showcasing full-stack development skills, projects, and expertise in JavaScript, Python, DevOps, and more.">
+    <meta property="og:title" content="Brenda Aramis - Portfolio">
+    <meta property="og:description" content="Explore projects and skills in full-stack development, DevOps, and more.">
+    <meta property="og:image" content="images/profile.jpg">
+    <meta property="og:url" content="https://your-portfolio-url.com">
+</head>
+<body>
+    <div class="bubbles">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        <div class="bubble bubble-4"></div>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Main Navigation">
+        <div class="nav-brand">Brenda Aramis</div>
+        <ul class="nav-menu">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="theme-toggle">
+            <input type="checkbox" id="theme-toggle" class="theme-input">
+            <label for="theme-toggle" class="theme-label">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </label>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content fade-in">
+            <h1>Hi, I'm <span class="highlight">Brenda</span></h1>
+            <h2>Full Stack Developer & DevOps Engineer</h2>
+            <p>Building scalable solutions with JavaScript, Python & Cloud Technologies</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="cta-button primary">View Projects</a>
+                <a href="#contact" class="cta-button secondary">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content fade-in">
+            <div class="about-image">
+                <img src="images/profile.jpg" alt="Brenda Aramis" class="profile-img">
+            </div>
+            <div class="about-text">
+                <h3>About Me</h3>
+                <p>Hello! I'm Brenda Aramis, a passionate software developer with a focus on creating elegant solutions to complex problems. With a background in computer science and a keen interest in web technologies, I specialize in building responsive and user-friendly applications.</p>
+                
+                <p>My journey in tech began at African Leadership Academy, and since then, I've been constantly learning and adapting to new technologies. I believe in writing clean, maintainable code and creating applications that make a real difference.</p>
+                
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-code"></i>
+                        <h4>Full Stack Development</h4>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-cloud"></i>
+                        <h4>DevOps & Cloud</h4>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-database"></i>
+                        <h4>Database Management</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container fade-in">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Web Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-pill">HTML5</div>
+                        <div class="skill-pill">CSS3</div>
+                        <div class="skill-pill">React.js</div>
+                        <div class="skill-pill">Next.js</div>
+                        <div class="skill-pill">Tailwind CSS</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend Technologies</h3>
+                    <div class="skill-items">
+                        <div class="skill-pill">Node.js</div>
+                        <div class="skill-pill">Express.js</div>
+                        <div class="skill-pill">Flask</div>
+                        <div class="skill-pill">Django</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <div class="skill-items">
+                        <div class="skill-pill">MySQL</div>
+                        <div class="skill-pill">MongoDB</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> DevOps</h3>
+                    <div class="skill-items">
+                        <div class="skill-pill">Docker</div>
+                        <div class="skill-pill">Kubernetes</div>
+                        <div class="skill-pill">CI/CD</div>
+                        <div class="skill-pill">Git</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Soft Skills</h3>
+                    <div class="skill-items">
+                        <div class="skill-pill">Problem Solving</div>
+                        <div class="skill-pill">Documentation</div>
+                        <div class="skill-pill">Collaboration</div>
+                        <div class="skill-pill">Attention to Detail</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container fade-in">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <img src="images/recipe-app.png" alt="Recipe App" class="project-image">
+                    <div class="project-info">
+                        <h3>Recipe App</h3>
+                        <p>A full-stack recipe management application with user authentication, recipe creation, and search functionality.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">React</span>
+                            <span class="tech-pill">Node.js</span>
+                            <span class="tech-pill">MongoDB</span>
+                            <span class="tech-pill">Express</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/YourUsername/recipe-app" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://your-recipe-app.com" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <img src="images/fitness-tracker.png" alt="Health Fitness Tracker" class="project-image">
+                    <div class="project-info">
+                        <h3>Health Fitness Tracker</h3>
+                        <p>A comprehensive fitness tracking platform for monitoring workouts, nutrition, and health metrics.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">React</span>
+                            <span class="tech-pill">Node.js</span>
+                            <span class="tech-pill">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AramisB/health-fitness-tracker-frontend" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://monkfish-app-od5cu.ondigitalocean.app" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container fade-in">
+            <h2>Get in Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let's Connect!</h3>
+                        <p>I'm always open to new opportunities and interesting projects.</p>
+                        
+                        <a href="mailto:brendachemta97@gmail.com" class="email-link">
+                            <i class="fas fa-envelope"></i>
+                            brendachemta97@gmail.com
+                        </a>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/brenda-aramis-858b2720a/" class="social-link" target="_blank" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/AramisB" class="social-link" target="_blank" aria-label="GitHub Profile">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://x.com/aramis_brenda" class="social-link" target="_blank" aria-label="Twitter Profile">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
