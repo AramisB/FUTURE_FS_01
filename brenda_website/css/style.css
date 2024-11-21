@@ -145,6 +145,7 @@ body.dark-mode .nav-menu a:hover, body.dark-mode .nav-menu a.active {
     border-radius: 25px;
     font-weight: 600;
     transition: transform 0.2s ease;
+    text-decoration: none;
 }
 
 .cta-button:hover {
