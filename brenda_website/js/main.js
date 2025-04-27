@@ -1,3 +1,16 @@
+// Service Worker Registration
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+                console.log('ServiceWorker registration successful');
+            })
+            .catch(err => {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+    });
+}
+
 // DOM Elements
 const navbar = document.querySelector('.navbar');
 const hamburger = document.querySelector('.hamburger');
@@ -210,4 +223,60 @@ document.addEventListener('mousemove', (e) => {
             bubble.style.transform = '';
         }
     });
+});
+
+// Loading Animation
+window.addEventListener('load', () => {
+    const loadingOverlay = document.getElementById('loading-overlay');
+    loadingOverlay.style.opacity = '0';
+    setTimeout(() => {
+        loadingOverlay.style.display = 'none';
+    }, 500);
+});
+
+// Lazy Loading Images
+document.addEventListener('DOMContentLoaded', () => {
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    
+    if ('loading' in HTMLImageElement.prototype) {
+        // Browser supports native lazy loading
+        lazyImages.forEach(img => {
+            img.addEventListener('load', () => {
+                img.classList.add('loaded');
+            });
+        });
+    } else {
+        // Fallback for browsers that don't support lazy loading
+        const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.add('loaded');
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        lazyImages.forEach(img => {
+            lazyLoadObserver.observe(img);
+        });
+    }
+});
+
+// Intersection Observer for fade-in animations
+const fadeElements = document.querySelectorAll('.fade-in');
+const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+fadeElements.forEach(element => {
+    fadeObserver.observe(element);
 });

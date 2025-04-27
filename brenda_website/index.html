@@ -4,13 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brenda Aramis - Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Font Loading -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Meta Tags -->
     <meta name="description" content="Portfolio of Brenda Aramis, showcasing full-stack development skills, projects, and expertise in JavaScript, Python, DevOps, and more.">
     <meta property="og:title" content="Brenda Aramis - Portfolio">
     <meta property="og:description" content="Explore projects and skills in full-stack development, DevOps, and more.">
     <meta property="og:image" content="images/profile.jpg">
     <meta property="og:url" content="https://chemu.net">
+    
+    <!-- PWA Support -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#6b46c1">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
     <div class="bubbles">
@@ -19,6 +38,12 @@
         <div class="bubble bubble-3"></div>
         <div class="bubble bubble-4"></div>
     </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay">
+        <div class="loader"></div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" aria-label="Main Navigation">
         <div class="nav-brand">Brenda Aramis</div>
@@ -48,10 +73,10 @@
         <div class="hero-content fade-in">
             <h1>Hi, I'm <span class="highlight">Brenda</span></h1>
             <h2>A Full Stack Developer & DevOps Engineer</h2>
-            <p>Building scalable solutions with JavaScript, Python & Cloud Technologies</p>
+            <p>Passionate about creating elegant solutions to complex problems. I specialize in building scalable web applications and implementing efficient DevOps practices. With expertise in JavaScript, Python, and cloud technologies, I transform ideas into reality.</p>
             <div class="hero-buttons">
-                <a href="#projects" class="cta-button primary">View Projects</a>
-                <a href="#contact" class="cta-button secondary">Contact Me</a>
+                <a href="#projects" class="cta-button primary">View My Work</a>
+                <a href="#contact" class="cta-button secondary">Let's Collaborate</a>
             </div>
         </div>
     </section>
@@ -60,26 +85,31 @@
     <section id="about" class="about">
         <div class="about-content fade-in">
             <div class="about-image">
-                <img src="images/profile.jpg" alt="Brenda Aramis" class="profile-img">
+                <img src="images/profile.jpg" alt="Brenda Aramis" class="profile-img" loading="lazy">
             </div>
             <div class="about-text">
                 <h3>About Me</h3>
-                <p>Hello! I'm Brenda Aramis, a passionate software developer with a focus on creating elegant solutions to complex problems. With a background in computer science and a keen interest in web technologies, I specialize in building responsive and user-friendly applications.</p>
+                <p>Hello! I'm Brenda Aramis, a passionate software developer with a strong foundation in both frontend and backend technologies. My journey in tech began at African Leadership Academy, where I discovered my love for problem-solving through code.</p>
                 
-                <p>My journey in tech began at African Leadership Academy, and since then, I've been constantly learning and adapting to new technologies. I believe in writing clean, maintainable code and creating applications that make a real difference.</p>
+                <p>I specialize in creating responsive, user-friendly applications that solve real-world problems. My approach combines clean code practices with modern development methodologies, ensuring scalable and maintainable solutions.</p>
+
+                <p>Beyond coding, I'm an advocate for continuous learning and knowledge sharing. I believe in the power of technology to create positive change and am always excited to take on new challenges that push my boundaries.</p>
                 
                 <div class="about-highlights">
                     <div class="highlight-item">
                         <i class="fas fa-code"></i>
                         <h4>Full Stack Development</h4>
+                        <p>Building end-to-end solutions with modern frameworks and best practices</p>
                     </div>
                     <div class="highlight-item">
                         <i class="fas fa-cloud"></i>
                         <h4>DevOps & Cloud</h4>
+                        <p>Implementing CI/CD pipelines and cloud infrastructure</p>
                     </div>
                     <div class="highlight-item">
                         <i class="fas fa-database"></i>
                         <h4>Database Management</h4>
+                        <p>Designing efficient database architectures and queries</p>
                     </div>
                 </div>
             </div>
@@ -167,21 +197,28 @@
             <h2>Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-item">
-                    <img src="images/recipe-app.png" alt="Recipe App" class="project-image">
+                    <img src="images/recipe.png" alt="Recipe Website" class="project-image" loading="lazy">
                     <div class="project-info">
-                        <h3>Recipe App</h3>
-                        <p>A full-stack recipe management application with user authentication, recipe creation, and search functionality.</p>
+                        <h3>Recipe App & Website</h3>
+                        <p>A comprehensive recipe management platform that streamlines the cooking experience. Features include:</p>
+                        <ul class="project-features">
+                            <li>User authentication and personalized recipe collections</li>
+                            <li>Advanced search with filtering by ingredients and dietary preferences</li>
+                            <li>Interactive cooking guides with step-by-step instructions</li>
+                            <li>Responsive design for seamless mobile experience</li>
+                        </ul>
                         <div class="project-tech">
                             <span class="tech-pill">React</span>
                             <span class="tech-pill">Node.js</span>
                             <span class="tech-pill">MongoDB</span>
                             <span class="tech-pill">Express</span>
+                            <span class="tech-pill">CSS</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/YourUsername/recipe-app" target="_blank" class="project-link">
+                            <a href="https://github.com/AramisB/recipe_app.git" target="_blank" class="project-link">
                                 <i class="fab fa-github"></i> Code
                             </a>
-                            <a href="https://your-recipe-app.com" target="_blank" class="project-link">
+                            <a href="https://recipe-app-delta-bice.vercel.app/" target="_blank" class="project-link">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
@@ -189,10 +226,16 @@
                 </div>
 
                 <div class="project-item">
-                    <img src="images/fitness-tracker.png" alt="Health Fitness Tracker" class="project-image">
+                    <img src="images/fitness-tracker.png" alt="Health Fitness Tracker" class="project-image" loading="lazy">
                     <div class="project-info">
                         <h3>Health Fitness Tracker</h3>
-                        <p>A comprehensive fitness tracking platform for monitoring workouts, nutrition, and health metrics.</p>
+                        <p>A comprehensive fitness tracking platform that helps users achieve their health goals. Key features include:</p>
+                        <ul class="project-features">
+                            <li>Workout logging and progress tracking</li>
+                            <li>Nutrition tracking with calorie counting</li>
+                            <li>Customizable fitness plans and goals</li>
+                            <li>Data visualization for progress monitoring</li>
+                        </ul>
                         <div class="project-tech">
                             <span class="tech-pill">React</span>
                             <span class="tech-pill">Node.js</span>
@@ -203,6 +246,60 @@
                                 <i class="fab fa-github"></i> Code
                             </a>
                             <a href="https://octopus-app-k3q7m.ondigitalocean.app/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <img src="images/e-commerce.png" alt="E-Commerce Platform" class="project-image" loading="lazy">
+                    <div class="project-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A full-featured online shopping platform with modern e-commerce capabilities. Features include:</p>
+                        <ul class="project-features">
+                            <li>Product catalog with advanced filtering</li>
+                            <li>Shopping cart and secure checkout process</li>
+                            <li>User account management and order history</li>
+                            <li>Responsive design for optimal shopping experience</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-pill">HTML</span>
+                            <span class="tech-pill">JavaScript</span>
+                            <span class="tech-pill">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AramisB/FUTURE_FS_02.git" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://future-fs-02-brown.vercel.app/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <img src="images/task-manager.png" alt="Task Manager" class="project-image" loading="lazy">
+                    <div class="project-info">
+                        <h3>Task Manager</h3>
+                        <p>A productivity application designed to help users organize and manage their tasks effectively. Features include:</p>
+                        <ul class="project-features">
+                            <li>Task creation and categorization</li>
+                            <li>Priority setting and deadline tracking</li>
+                            <li>Progress visualization and statistics</li>
+                            <li>Intuitive user interface for easy task management</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-pill">HTML</span>
+                            <span class="tech-pill">JavaScript</span>
+                            <span class="tech-pill">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AramisB/FUTURE_FS_03.git" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://future-fs-03-seven.vercel.app/" target="_blank" class="project-link">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
